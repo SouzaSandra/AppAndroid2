@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".activities.ActivityCadastro">
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp"/>
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:background="@drawable/fornecedores"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+    <TextView
+        android:id="@+id/GPS"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="Cadastrar Solicitação"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edtNome_Solicita"
+        android:hint="Nome"
+        android:inputType="textPersonName"
+        android:background="@color/white"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"/>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <EditText
+        android:id="@+id/edtEndereco"
+        android:hint="Endereço:"
+        android:inputType="text"
+        android:background="@color/white"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <EditText
+        android:id="@+id/edtBairro"
+        android:hint="Bairro/localidade:"
+        android:inputType="text"
+        android:background="@color/white"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <EditText
+        android:id="@+id/edtContato"
+        android:hint="Telefone:"
+        android:inputType="phone"
+        android:background="@color/white"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <EditText
+        android:id="@+id/edtAtendente"
+        android:hint="Nome do Atendente"
+        android:inputType="text"
+        android:background="@color/white"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+    <Button
+        android:id="@+id/btnSalvarCadastro"
+        android:text="Salvar Cadastro"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"/>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <Button
+        android:id="@+id/btnListarCadastro"
+        android:text="Consultar Cadastros"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"/>
+
+
+</LinearLayout>
+
+
