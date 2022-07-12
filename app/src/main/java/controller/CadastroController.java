@@ -15,13 +15,13 @@ public class CadastroController {
         cadastroDAO = new CadastroDAO(cConexaoSQLite);
     }
 
-    public Long salvarCadastroCtrl(Cadastro sCadastro) {
-        return cadastroDAO.salvarCadastroDAO(sCadastro);
-    }
-
-    public List<Cadastro>getListaCadastroCtrl(){
-        return  this.cadastroDAO.getListaCadastroDAO();
-    }
+//    public Long salvarCadastroCtrl(Cadastro sCadastro) {
+//        return cadastroDAO.salvarCadastroDAO(sCadastro);
+//    }
+//
+//    public List<Cadastro>getListaCadastroCtrl(){
+//        return  this.cadastroDAO.getListaCadastroDAO();
+//    }
 
     public boolean excluirCadastroController(long IdCadastro) {
         return true; //cadastroDAO.excluirCadastroDAO(IdCadastro);

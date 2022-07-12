@@ -9,17 +9,15 @@
     tools:context=".activities.ActivityCadastro">
     <Space
         android:layout_width="match_parent"
-        android:layout_height="30dp"/>
+        android:layout_height="20dp"/>
 
     <ImageView
-        android:layout_width="250dp"
-        android:layout_height="200dp"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
         android:layout_gravity="center"
         android:background="@drawable/fornecedores"/>
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="20dp"/>
+
 
     <TextView
         android:id="@+id/GPS"
@@ -94,17 +92,34 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="20dp"/>
+        android:layout_height="10dp"/>
+    <EditText
+        android:id="@+id/edtCep"
+        android:hint="Digite o CEP"
+        android:inputType="numberSigned"
+        android:background="@color/white"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="5dp"/>
 
     <Button
-        android:id="@+id/btnSalvarCadastro"
-        android:text="Salvar Cadastro"
+        android:id="@+id/btnBuscarCEP"
+        android:text="Buscar CEP"
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:layout_gravity="center"/>
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="10dp"/>
+
+    <Button
+        android:id="@+id/btnSalvarCadastro"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:onClick="salvarCadastro"
+        android:text="Salvar Cadastro" />
 
     <Button
         android:id="@+id/btnListarCadastro"
@@ -112,7 +127,6 @@
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:layout_gravity="center"/>
-
 
 </LinearLayout>
 

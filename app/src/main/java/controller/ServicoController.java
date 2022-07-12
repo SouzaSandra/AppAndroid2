@@ -16,13 +16,13 @@ public class ServicoController {
         servicoDAO = new ServicoDAO(sConexaoSQLite);
     }
 
-    public Long salvarServicoCtrl(Servico sServico) {
-        return servicoDAO.salvarSevicoDAO(sServico);
-    }
-
-    public List<Servico> getListaServicoCtrl() {
-        return servicoDAO.getListaServicoDAO();
-    }
+//    public Long salvarServicoCtrl(Servico sServico) {
+//        return servicoDAO.salvarSevicoDAO(sServico);
+//    }
+//
+//    public List<Servico> getListaServicoCtrl() {
+//        return servicoDAO.getListaServicoDAO();
+//    }
 
 
     public boolean excluirServicoController(long IdServico) {

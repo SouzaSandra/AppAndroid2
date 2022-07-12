@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Jpaulo/Desktop/Projetos_Android/AppMobile2/app/src/main/res/layout/activity_cadastro.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Jpaulo/Desktop/Projetos_Android/AppMobile2/app/src/main/res/layout/activity_listar_servicos.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Jpaulo/Desktop/Projetos_Android/AppMobile2/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Jpaulo/Desktop/Projetos_Android/AppMobile2/app/src/main/res/layout/activity_maps.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Jpaulo/Desktop/Projetos_Android/AppMobile2/app/src/main/res/layout/activity_servico.xml" value="0.18854166666666666" />
+        <entry key="..\:/Users/Jpaulo/Desktop/Projetos_Android/AppMobile2/app/src/main/res/layout/activity_usuario.xml" value="0.33" />
         <entry key="..\:/Users/Sandra/AndroidStudioProjects/AppMobile/app/src/main/res/drawable/background.xml" value="0.158" />
         <entry key="..\:/Users/Sandra/AndroidStudioProjects/AppMobile/app/src/main/res/drawable/container_user.xml" value="0.158" />
         <entry key="..\:/Users/Sandra/AndroidStudioProjects/AppMobile/app/src/main/res/drawable/drawable.xml" value="0.1615" />
@@ -19,11 +25,17 @@
         <entry key="..\:/Users/Sandra/AndroidStudioProjects/AppMobile/app/src/main/res/layout/layout_servico.xml" value="0.16893115942028986" />
         <entry key="..\:/Users/Sandra/AndroidStudioProjects/AppMobile/app/src/main/res/layout/layout_usuario.xml" value="0.1" />
         <entry key="..\:/Users/Sandra/AndroidStudioProjects/AppMobile2/app/src/main/res/layout/activity_cadastro.xml" value="0.16485507246376813" />
+        <entry key="..\:/Users/Sandra/AndroidStudioProjects/AppMobile2/app/src/main/res/layout/activity_listar_cadastro.xml" value="0.16485507246376813" />
         <entry key="..\:/Users/Sandra/AndroidStudioProjects/AppMobile2/app/src/main/res/layout/activity_listar_usuario.xml" value="0.16485507246376813" />
         <entry key="..\:/Users/Sandra/AndroidStudioProjects/AppMobile2/app/src/main/res/layout/activity_login.xml" value="0.33" />
-        <entry key="..\:/Users/Sandra/AndroidStudioProjects/AppMobile2/app/src/main/res/layout/activity_main.xml" value="0.16485507246376813" />
+        <entry key="..\:/Users/Sandra/AndroidStudioProjects/AppMobile2/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Sandra/AndroidStudioProjects/AppMobile2/app/src/main/res/layout/activity_servico.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Sandra/AndroidStudioProjects/AppMobile2/app/src/main/res/layout/activity_usuario.xml" value="0.16485507246376813" />
         <entry key="..\:/Users/Sandra/AndroidStudioProjects/AppMobile2/app/src/main/res/layout/layout_cadastro.xml" value="0.16485507246376813" />
+        <entry key="..\:/Users/Sandra/AndroidStudioProjects/AppMobile2/app/src/main/res/layout/layout_servico.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Sandra/AndroidStudioProjects/AppMobile2/app/src/main/res/layout/layout_usuario.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Sandra/AndroidStudioProjects/newPorject/AppMobile2/app/src/main/res/layout/activity_cadastro.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Sandra/AndroidStudioProjects/newPorject/AppMobile2/app/src/main/res/layout/activity_usuario.xml" value="0.27291666666666664" />
       </map>
     </option>
   </component>

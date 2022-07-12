@@ -1,75 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:orientation="vertical"
 android:background="@drawable/background"
-tools:context="com.example.appmobile.MainActivity">
-
-<Space
+tools:context="com.example.appmobile.activities.MainActivity">
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="70dp"/>
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-<ImageView
-    android:layout_width="410dp"
-    android:layout_height="200dp"
-    android:src="@drawable/login"/>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="70dp"/>
 
-<Space
-    android:layout_width="match_parent"
-    android:layout_height="25dp"/>
+    <ImageView
+        android:layout_width="410dp"
+        android:layout_height="200dp"
+        android:src="@drawable/login"/>
 
-<TextView
-    android:layout_width="250dp"
-    android:layout_height="70dp"
-    android:text="ServiceCap"
-    android:textSize="40dp"
-    android:layout_gravity="center"
-    android:textAlignment="center"
-    android:textStyle="bold"
-    android:textColor="@color/white"/>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp"/>
 
-<Space
-    android:layout_width="match_parent"
-    android:layout_height="25dp"/>
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="ServiceCap"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        android:textStyle="bold" />
 
-<TextView
-    android:layout_width="300dp"
-    android:layout_height="wrap_content"
-    android:text="Agilidade e Eficiência"
-    android:layout_gravity="center"
-    android:textAlignment="center"
-    android:textColor="@color/white"
-    android:textSize="30dp"
-    android:textStyle="bold" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp"/>
 
-<Space
-    android:layout_width="match_parent"
-    android:layout_height="50dp"/>
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Agilidade e Eficiência"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold" />
 
-<Button
-    android:id="@+id/btnCadastrarServicos"
-    android:layout_width="250dp"
-    android:layout_height="50dp"
-    android:layout_gravity="center"
-    android:text="Cadastrar serviços"
-    />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
 
-<Button
-    android:id="@+id/btnListarServicos"
-    android:layout_width="250dp"
-    android:layout_height="50dp"
-    android:layout_gravity="center"
-    android:text=" Consultar solicitações"/>
+    <Button
+        android:id="@+id/btnCadastrarServicos"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text="Cadastrar serviços"
+        />
 
-<Button
-    android:id="@+id/btnCadastrarUsuario"
-    android:layout_width="250dp"
-    android:layout_height="50dp"
-    android:layout_gravity="center"
-    android:text="Cadastrar Usuário"/>
+    <Button
+        android:id="@+id/btnListarServicos"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text=" Consultar solicitações"/>
+
+    <Button
+        android:id="@+id/btnCadastrarUsuario"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text="Cadastrar Usuário"/>
+
+    <Button
+        android:id="@+id/btnmapa"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:onClick="mapa"
+        android:text="Local Usuario" />
+
 
 </LinearLayout>
+
+</ScrollView>

@@ -18,14 +18,14 @@ public class UsuarioController {
         userDAO = new UserDAO(uConexaoSQLite);
     }
 
-    public long salvarUsuarioCtrl(Usuario sUsuario) {
-        return userDAO.salvarUserDAO(sUsuario);
-
-    }
-
-    public List<Usuario> getListaUsuarioCtrl() {
-        return this.userDAO.getListaUserDAO();
-    }
+//    public long salvarUsuarioCtrl(Usuario sUsuario) {
+//        return userDAO.salvarUserDAO(sUsuario);
+//
+//    }
+//
+//    public List<Usuario> getListaUsuarioCtrl() {
+//        return this.userDAO.getListaUserDAO();
+//    }
 
 
     public boolean excluirCadastroController(long IdUsuario) {

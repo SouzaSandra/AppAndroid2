@@ -48,7 +48,7 @@ public class ActivityLogin extends AppCompatActivity {
         });
 
 
-        ConexaoSQLite conexaoSQLite = ConexaoSQLite.getInstanciaConexao(this);
+        ConexaoSQLite conexaoSQLite = new ConexaoSQLite(this);
 
         user_Nome = (EditText) findViewById(R.id.user_Nome);
         user_Senha = (EditText) findViewById(R.id.user_Senha);

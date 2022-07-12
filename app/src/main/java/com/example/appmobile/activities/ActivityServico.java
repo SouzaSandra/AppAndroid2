@@ -1,7 +1,10 @@
 package com.example.appmobile.activities;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.provider.BaseColumns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,11 +15,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.appmobile.R;
 import com.example.appmobile.activities.dbHelper.ConexaoSQLite;
 
+import DAO.ServicoDAO;
 import controller.ServicoController;
 import modelo.Servico;
 
 public class ActivityServico extends AppCompatActivity {
 
+    private ConexaoSQLite helper;
     private EditText edt_Ordem;
     private EditText edtDescricao;
     private EditText edtLocal;
@@ -27,29 +32,74 @@ public class ActivityServico extends AppCompatActivity {
 
     private Button btnSalvarServico;
     private Servico servico;
+    private ServicoDAO dao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_servico);
 
-        ConexaoSQLite.getInstanciaConexao(this);
-
         edt_Ordem = (EditText) findViewById(R.id.edt_Ordem);
         edtDescricao = (EditText) findViewById(R.id.edtDescrição);
         edtLocal = (EditText) findViewById(R.id.edtLocal);
-        edtAtendente = (EditText) findViewById(R.id.edtAtendente);
+        edtAtendente = (EditText) findViewById(R.id.edAtendente);
         edtEncarregado = (EditText) findViewById(R.id.edtEncarregado);
         edtData = (EditText) findViewById(R.id.edtData);
 
+        helper = new ConexaoSQLite(this);
+
+
+
         btnSalvarServico = (Button) findViewById(R.id.btnSalvarServico);
         btnSalvarServico.setOnClickListener(new View.OnClickListener() {
+
+
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ActivityServico.this, ActivityListarServicos.class);
                 startActivity(intent);
+            }
+
+
+//                SQLiteDatabase db = helper.getReadableDatabase();
+//                String[]projection ={
+//                        BaseColumns._ID,
+//                       // nome.COLUMN_NAME_TITLE,
+//                      //  FeedEntry.COLUMN_NAME_SUBTITLE
+//                };
+
+
+        });
+    }
+    public void salvarServico(View view) {
+        SQLiteDatabase db = helper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("nome", edt_Ordem.getText().toString());
+        values.put("descrição", edtDescricao.getText().toString());
+        values.put("local", edtLocal.getText().toString());
+        values.put("atendente", edtAtendente.getText().toString());
+        values.put("encarregado", edtEncarregado.getText().toString());
+        values.put("data", edtData.getText().toString());
+
+        long resultado = db.insert("salvarServico", null, values);
+        if (resultado != -1) {
+            Toast.makeText(ActivityServico.this, "Serviço Cadastrado", Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(ActivityServico.this, "Serviço não Cadastrado", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        helper.close();
+        super.onDestroy();
+    }
+}
+
+
+
                 
-                Servico servicoCadastrar = getServicoSolicitado();
+              /*  Servico servicoCadastrar = getSalvarServico();
                 if (servicoCadastrar != null) {
 
                     ServicoController servicoController = new ServicoController(ConexaoSQLite.getInstanciaConexao(ActivityServico.this));
@@ -57,17 +107,7 @@ public class ActivityServico extends AppCompatActivity {
 
                     long idServico = servicoController.salvarServicoCtrl(servicoCadastrar);
                     if (idServico > 0) {
-                        Toast.makeText(ActivityServico.this, "Serviço Cadastrado", Toast.LENGTH_LONG).show();
-                    } else {
-                        Toast.makeText(ActivityServico.this, "Serviço não Cadastrado", Toast.LENGTH_LONG).show();
-                    }
-                } else {
-                    Toast.makeText(ActivityServico.this, "Informe todos os campos", Toast.LENGTH_LONG).show();
-                }
 
-            }
-        });
-    }
 
     private Servico getServicoSolicitado() {
         Servico servico = new Servico();
@@ -102,7 +142,7 @@ public class ActivityServico extends AppCompatActivity {
         return servico;
 
     }
-}
+*/
    
 
 

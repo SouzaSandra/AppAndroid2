@@ -19,7 +19,7 @@ public class ServicoDAO {
         this.conexaoSQLite = conexaoSQLite;
     }
 
-    public Long salvarSevicoDAO(Servico sServico) {
+    public Long inserirSevicoDAO(Servico sServico) {
         SQLiteDatabase db = conexaoSQLite.getReadableDatabase(); // leitura do banco de dados
         try {
             ContentValues values = new ContentValues();
@@ -30,6 +30,8 @@ public class ServicoDAO {
             values.put("Atendente", sServico.getAtendente());
             values.put("Encarregado", sServico.getEncarregado());
             values.put("Data", sServico.getData());
+            return  db.insert("servico", null, values);
+
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -41,7 +43,7 @@ public class ServicoDAO {
 
     }
 
-    public List<Servico> getListaServicoDAO() {
+    public List<Servico> ListaServicoDAO() {
         List<Servico> Listaservico = new ArrayList<>();
         SQLiteDatabase db = null;
         Cursor cursor;
@@ -78,9 +80,9 @@ public class ServicoDAO {
         SQLiteDatabase dbs = null;
         try {
             db = this.conexaoSQLite.getWritableDatabase();
-            db.delete("cadastro", "id =?", new String[]{String.valueOf(IdServico)});
+            db.delete("servico", "id =?", new String[]{String.valueOf(IdServico)});
         } catch (Exception e) {
-            Log.d("ERRO LISTA PRODUTOS", "ERRO AO RETORNAR SERVIÇO");
+            Log.d("ERRO LISTA SERVICO", "ERRO AO EXCLUIR SERVIÇO");
         }
     }
 }

@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -17,9 +18,12 @@ import com.example.appmobile.adapters.adapterListaServico;
 import com.example.appmobile.adapters.adapterListarCadastro;
 import com.example.appmobile.adapters.adapterListarUsuario;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+import DAO.CadastroDAO;
+import DAO.ServicoDAO;
 import controller.ServicoController;
 import controller.UsuarioController;
 import modelo.Cadastro;
@@ -30,19 +34,30 @@ public class ActivityListarServicos extends AppCompatActivity {
 
     private ListView lsvServico;
     private List<Servico> servicoList;
-    private adapterListaServico adaptersListaServico;
+    private List<Servico> servicoFiltro = new ArrayList<>();
+    private ServicoDAO dao;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_servicos);
+        lsvServico = (ListView) findViewById(R.id.lsvServico);
+//        dao = new ServicoDAO(this);
 
-        ServicoController servicoController = new ServicoController(ConexaoSQLite.getInstanciaConexao(ActivityListarServicos.this));
-        servicoController.getListaServicoCtrl();
+        lsvServico = new ListView(this);
+        servicoList = dao.ListaServicoDAO();
+        servicoFiltro.addAll(servicoList);
+        ArrayAdapter<Servico> adaptador = new ArrayAdapter<Servico>(this, android.R.layout.simple_list_item_1, servicoList);
+        lsvServico.setAdapter(adaptador);
+    }
+}
+
+
+       /* servicoList = new List<Servico> ();
 
         this.servicoList = new ArrayList(); //busca informações do banco para a lista
-        this.lsvServico = (ListView)findViewById(R.id.lsvServico);
+        this.
         this.adaptersListaServico = new adapterListaServico(ActivityListarServicos.this, servicoList);
         this.lsvServico.setAdapter((this.adaptersListaServico));
 
@@ -91,5 +106,5 @@ public class ActivityListarServicos extends AppCompatActivity {
                 ConexaoSQLite conexaoSQLite = ConexaoSQLite.getInstanciaConexao(this);
     }
 }
-
+*/
 

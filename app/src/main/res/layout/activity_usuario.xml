@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,114 +8,162 @@
     android:background="@drawable/background"
     tools:context=".activities.ActivityUsuario">
 
-    <Space
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="300dp"
-        android:layout_height="200dp"
-        android:layout_gravity="center"
-        android:background="@drawable/service"/>
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="20dp"/>
-    <TextView
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="Cadastrar Usuário"
-        android:layout_gravity="center"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="30dp"
-        android:textStyle="bold" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="20dp"/>
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@drawable/service"/>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
 
-    <EditText
-        android:id="@+id/edt_id"
-        android:hint="Id Usuário"
-        android:inputType="numberSigned"
-        android:background="@color/white"
-        android:layout_width="350dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center"/>
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="10dp"/>
+        <TextView
+            android:id="@+id/id_user"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Cadastrar Usuário"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/nomeUsuario"
-        android:hint="Nome:"
-        android:inputType="textPersonName"
-        android:background="@color/white"
-        android:layout_width="350dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center"/>
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="10dp"/>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
 
-    <EditText
-        android:id="@+id/foneUsuario"
-        android:hint="Telefone:"
-        android:inputType="phone"
-        android:background="@color/white"
-        android:layout_width="350dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center"/>
+        <EditText
+            android:id="@+id/edt_id"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:hint="Nome"
+            android:inputType="text" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="10dp"/>
+        <Button
+            android:id="@+id/button"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="#1DCD26"
+            android:onClick="EncontrarUser"
+            android:text="Pesquisar"
+            app:backgroundTint="#1DCD26" />
 
-    <EditText
-        android:id="@+id/setorUsuario"
-        android:hint="Setor:"
-        android:inputType="text"
-        android:background="@color/white"
-        android:layout_width="350dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center"/>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="10dp"/>
-    <EditText
-        android:id="@+id/senha_Usuario"
-        android:hint="Senha"
-        android:inputType="numberPassword"
-        android:background="@color/white"
-        android:layout_width="350dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center"/>
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="#FF8F00"
+            android:onClick="updateCourse"
+            android:text="Atualizar"
+            app:backgroundTint="#F9A825" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="20dp"/>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
 
-    <Button
-        android:id="@+id/btnCadastrarUsuario"
-        android:text="Cadastrar"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"/>
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="#C62828"
+            android:onClick="deleteCourse"
+            android:text="Excluir"
+            app:backgroundTint="#C62828" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="10dp"/>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
 
-    <Button
-        android:id="@+id/btnListarUsuario"
-        android:text="Consultar usuários"
-        android:layout_width="210dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"/>
+        <EditText
+            android:id="@+id/nomeUsuario"
+            android:hint="Nome:"
+            android:inputType="textPersonName"
+            android:background="@color/white"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"/>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <EditText
+            android:id="@+id/foneUsuario"
+            android:hint="Telefone:"
+            android:inputType="phone"
+            android:background="@color/white"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <EditText
+            android:id="@+id/setorUsuario"
+            android:hint="Setor:"
+            android:inputType="text"
+            android:background="@color/white"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+        <EditText
+            android:id="@+id/senha_Usuario"
+            android:hint="Senha"
+            android:inputType="numberPassword"
+            android:background="@color/white"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+
+        <Button
+            android:id="@+id/btnCadastrarUsuario"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:onClick="salvarUsuario"
+            android:text="Cadastrar" />
+
+        <Button
+            android:id="@+id/btnListarUsuario"
+            android:text="Consultar usuários"
+            android:layout_width="210dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"/>
 
 
+    </LinearLayout>
 
-</LinearLayout>
+
+</ScrollView>
 
 

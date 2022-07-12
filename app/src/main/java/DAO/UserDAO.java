@@ -18,7 +18,7 @@ public class UserDAO {
         this.conexaoSQLite = conexaoSQLite;
     }
 
-    public Long salvarUserDAO(Usuario usuario) {
+    public Long inserirUserDAO(Usuario usuario) {
         SQLiteDatabase db = conexaoSQLite.getReadableDatabase(); // leitura do banco de dados
         try {
             ContentValues values = new ContentValues();
@@ -27,6 +27,7 @@ public class UserDAO {
             values.put("Fone", usuario.getFone());
             values.put("Setor", usuario.getSetor());
             values.put("Senha", usuario.getSenha());
+            return db.insert("servico", null, values);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -40,7 +41,7 @@ public class UserDAO {
 
     }
 
-    public List<Usuario> getListaUserDAO() {
+    public List<Usuario> ListaUserDAO() {
         List<Usuario> ListaUsuario = new ArrayList<>();
         SQLiteDatabase db = null;
         Cursor cursor;
