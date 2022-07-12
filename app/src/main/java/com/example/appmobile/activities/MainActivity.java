@@ -86,6 +86,12 @@ public class MainActivity extends Activity {
 
     }
 
+
+
+
+
+
+
     public void mapa(View view){
         Intent intent = new Intent(MainActivity.this, MapsActivity.class);
         startActivity(intent);
